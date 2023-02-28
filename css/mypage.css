@@ -98,7 +98,7 @@ a:hover {
   padding-top: 200px;
 }
 h1 {
-  font-size: 40px;
+  font-size: 39px;
   font-family: Droid Serif, sans-serif;
 }
 .ml10 .letter {
@@ -200,9 +200,11 @@ p {
 }
 .fa-angle-up.active{
   display: inline-block;
+  background-color: rgb(59, 59, 108,0);
 }
 .fa-angle-down{
   display: inline-block;
+  background-color: rgb(59, 59, 108,0);
 }
 .fa-angle-down.active{
   display: none;
@@ -344,7 +346,7 @@ address {
 
 /*--------------------------------Responsive Design below-----------------------------------------*/
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 991px) {
   /*---------------Nav Bar--------------*/
 
   label.logo {
@@ -417,6 +419,14 @@ address {
   #headtext {
     padding-top: 30px;
   }
+  #downloadbtn:hover{
+    background-color: rgb(100, 100, 159, 0);
+  }
+  #downloadbtn:active{
+    background-color: rgb(100, 100, 159);
+    color: white;
+    transition: all 0.5s;
+  }
 
   /*---------------About Me-----------------*/
 
@@ -424,15 +434,20 @@ address {
     display: none;
   }
   #aboutme{
-    display: flex;
+    display: block;
     padding: 15px;
     border-radius: 50px;
     padding-inline: 30px;
     transition: all 0.3s ease-in-out;
-  }
-  #aboutme:hover{
-    background-color: rgb(59, 59, 108);
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid;
+    border-color: white;
     color: white;
+  }
+  #aboutme:active{
+    background-color: rgb(100, 100, 159);
+    color: white;
+    transition: all 0.5s;
   }
 
   /*------------------Footer--------------------*/
