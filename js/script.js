@@ -1,44 +1,24 @@
 //---------------------Loader--------------------------- 
 
 window.onload = function () {
+  var textWrapper = document.querySelector('.ml10 .letters');
+  textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+  anime.timeline({ loop: false })
+    .add({
+      targets: '.ml10 .letter',
+      rotateY: [-90, 0],
+      duration: 1300,
+      delay: (el, i) => 45 * i
+    })
+    .add({
+      targets: '.ml10',
+      duration: 1000,
+      easing: "easeOutExpo",
+      delay: 1000
+    });
   document.querySelector('.loading-container').style.display = 'none';
 };
-
-
-//---------------------Heading--------------------------- 
-
-var textWrapper = document.querySelector('.ml10 .letters');
-textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
-
-anime.timeline({ loop: false })
-  .add({
-    targets: '.ml10 .letter',
-    rotateY: [-90, 0],
-    duration: 1300,
-    delay: (el, i) => 45 * i
-  })
-  .add({
-    targets: '.ml10',
-    duration: 1000,
-    easing: "easeOutExpo",
-    delay: 1000
-  });
-
-
-var coll = document.getElementsByClassName("collapsible");
-var i;
-
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function () {
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.display === "block") {
-      content.style.display = "none";
-    } else {
-      content.style.display = "block";
-    }
-  });
-}
 
 
 
