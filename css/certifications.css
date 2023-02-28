@@ -1,0 +1,259 @@
+body{
+	background-color: black;
+}
+#cerarea, #aoscont{
+	overflow-x: hidden;
+	padding-bottom: 50px;
+}
+*, *:before, *:after { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.aos-all {
+	max-width: 100% !important;
+	width: 100% !important;
+	width: 100vw !important;
+	overflow: hidden;
+	margin: 0;
+}
+
+/*-----------------Navigation Bar----------------*/
+
+
+ul{
+	float: right;
+	min-width:60%;
+	font-size: 23px;
+	font-family: 'Dubai light';
+	padding-top: 15px;
+	z-index: 0;
+}
+label.logo{
+	font-size: 250%;
+	font-style: italic;
+	font-weight: bold;
+	color: white;
+	margin: auto;
+	padding-left: 30px;
+	padding-bottom: 4px;
+}
+nav{
+	background-color: black;
+	position: fixed;
+	width: 100%;
+	z-index: 5;
+	max-height: 65px;
+}
+a{
+	color: #ffffff;
+	transition: font-size .2s;
+}
+.checkbtn{
+	color: white;
+	float: right;
+	padding-top: 7px;
+	margin-right: 20px;
+	cursor: pointer;
+	display: none;
+	z-index: 1;
+}
+#check{
+	display: none;
+}
+li:hover{
+	font-size: 25px;
+}
+ul.li{
+    float: right;
+	min-height: 40px;
+}
+li{
+	list-style: none;
+}
+a:hover{
+	text-decoration: none;
+	color: #007bff;
+	transition: 0.4s;
+}
+/*------------------Carousel-------------------*/
+
+
+#carousel-control{
+	z-index: 0;
+}
+#carousel-slide{
+	padding-top: 150px;
+}
+.carousel-inner{
+	
+}
+#carousel{
+	padding-top: 150px;
+}
+#carouselExampleIndicators{
+	min-height: 500px;
+}
+#carousel-item{
+	padding-left: 50px;
+	padding-right: 50px;
+}
+#carousel-des{
+	padding-top: 130px;
+	background: linear-gradient(to right, black 20%, #000080 100%);
+}
+
+
+/*----------------Cer Area------------------*/
+
+#cerarea{
+	padding-top: 50px;
+}
+
+h2{
+	font-size: 28px;
+}
+
+/*---------------Glowing Border-----------------*/
+
+#cerbox{
+	padding: 30px;
+	margin-top: 20px; 
+	transition: .5s;
+}
+#cerboximg{
+	border-radius: 5px;
+	box-shadow: 0px 0px 35px 20px #000080; 
+}
+#cerbox:hover{
+	transition: .5s;
+	padding: 20px;
+}
+
+/*---------------Cer Button-----------------*/
+
+#cerbtn{
+	position: absolute;
+	top: 70%;
+  	left: 37%;
+  	display: none;
+}
+#cerboximg:hover + #cerbtn{
+	transition: 1s;
+	display: block;
+}
+#cerbtn:hover{
+	background-color: #000080;
+	display: block;
+}
+
+/*-----------------Footer------------------*/
+
+
+hr{
+	width: 90%;
+	height: 1px;
+	background-image: linear-gradient(to right, rgba(0, 0, 0), rgba(255, 255, 255), rgba(0, 0, 0));
+}
+footer{
+	color: white;
+	padding-top: 30px;
+}
+#addhead{
+	text-align: center;
+}
+address{
+	text-align: center;
+}
+#follow{
+	text-align: center;
+}
+#social{
+	padding: 10px;
+}
+#copyright{
+	padding-top: 10px;
+	font-family: OpenSans,Arial,sans-serif;
+}
+
+/*----------------Responsive Design below-----------------*/
+
+
+@media screen and (max-width: 992px){
+	
+/*------------------Nav Bar----------------*/
+
+	label.logo{
+		display: none;
+	}
+	nav ul li a{
+		font-size: 24px;
+	}
+	.checkbtn{
+		display: block;
+	}
+	nav{
+		z-index: 1;
+	}
+	ul{
+		position: absolute;
+		width: 110%;
+		background: rgba(0, 0, 0, 0.8);
+		top: -200px;
+		left: 1.5%;
+		float: left;
+		transition: all .5s;
+		padding-top: 0px;
+		padding-bottom: 0px;
+		padding-left: 20px;
+		max-height: 200px;
+		z-index: 0;
+	}
+	li{
+		list-style: none;
+		min-height: 55px;
+		max-width: 200px;
+	}
+	a:hover{
+		text-decoration: none;
+		color: #007bff;
+	}
+	#check:checked ~ ul{
+		top: 10px;
+	}
+
+/*------------------Carousel----------------*/
+
+	#carousel{
+		padding-top: 100px;
+	}
+	#carousel-des{
+		background: linear-gradient(to bottom, black 15%, #000080 100%);
+	}
+	.carousel-indicators{
+		display: none;
+	}
+
+/*---------------Footer----------------*/
+
+
+	#follow{
+		padding-top: 15px;
+	}
+	#socialdiv{
+		padding-bottom: 10px;
+	}
+	#copyright{
+		padding-bottom: 20px;
+	}
+	h2{
+		font-size: 23px;
+	}
+}
+
+@media screen and (max-width: 1200px){
+	#carousel-des{
+		padding-top: 70px;
+	}
+}
+@media screen and (max-width: 768px){
+	#cerbtn{
+  		left: 35%;
+	}
+}

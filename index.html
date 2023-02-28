@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<title> Ghritak Jyoti Kalita</title>
+		<link rel="icon" href="images/icon.jpg" type="image/x-icon">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+			integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+		<script src="https://kit.fontawesome.com/b7101c3f11.js" crossorigin="anonymous"></script>
+		<link href='https://fonts.googleapis.com/css?family=Droid+Serif:400' rel='stylesheet' type='text/css'>
+		<link href="https://fonts.googleapis.com/css2?family=Jura:wght@300&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="css/navbar.css">
+		<link rel="stylesheet" href="css/mypage.css">
+		<link rel="stylesheet" href="css/about.css">
+		<link rel="stylesheet" href="css/contact.css">
+		<link rel="stylesheet" href="css/loader.css">
+	</head>
+
+	<body>
+		<div class="loader-container">
+			<div class="loader"></div>
+		</div>
+
+
+		<nav data-aos="fade-down" id="navid">
+			<input type="checkbox" class="checkbtn" id="check">
+			<label class="checkbtn" id="nav-icon" for="check">
+				<span></span><span></span><span></span><span></span>
+			</label>
+			<ul class="nav row d-flex justify-content-end" id="navul">
+				<li class="nav-item col-12 col-lg-2 text-white" id="navli"><a id="nav-home">Home</a></li>
+				<li class="nav-item col-12 col-lg-2 text-white" id="navli"><a id="nav-about">About</a></li>
+				<!-- <li class="nav-item col-12 col-lg-2 text-white" id="navli"><a id="nav-gallery"
+						href="gallery.html">Gallery</a></li> -->
+				<li class="nav-item col-12 col-lg-2 text-white" id="navli"><a id="nav-project">Projects</a></li>
+				<li class="nav-item col-12 col-lg-3 text-white" id="navli"><a id="nav-contact">Contact</a></li>
+			</ul>
+		</nav>
+
+		<div style="padding-bottom: 20px;" id="mypage">
+			<div class="container" id="aoscont">
+				<div class="row" id="div1">
+					<div class="col-12 col-lg-6 d-flex justify-content-center" data-aos="zoom-in">
+						<div class="d-flex align-items-center">
+							<img id="myimg" src="images/img.webp" alt="My Image">
+						</div>
+					</div>
+
+					<div class="col-12 col-lg-6" id="header">
+						<div id="headtext" style="padding-bottom: 20px; padding-top: 50px;">
+							<h1 class="ml10">
+								<span class="text-wrapper">
+									<span class="text-white letters">GHRITAK JYOTI KALITA</span>
+								</span>
+							</h1>
+							<div data-aos="fade-in" style="font-family: 'Jura', sans-serif; text-transform: uppercase;">
+								<h2 class="text-white">front end Developer</h2>
+							</div>
+						</div>
+						<div>
+							<div class="d-flex justify-content-center" style="margin-bottom: 20px;">
+								<button id="aboutme" data-bs-toggle="collapse" data-bs-target="#collapseExample"
+									aria-expanded="false" aria-controls="collapseExample">
+									About Me
+									<i class="fa fa-angle-down" style="margin-left: 10px; margin-top: 4px;"></i>
+									<i class="fa fa-angle-up" style="margin-left: 10px; margin-top: 4px;"></i>
+								</button>
+							</div>
+							<div class="collapse" id="collapseExample">
+								<div style="color: white">
+									<p style="text-align: justify;">&emsp;I am a B.Tech undergrad, Front end developer,
+										Data science enthusiast ; Skilled in Python and focused in
+										Machine Learning. I am currently in my
+										last year pursuing Bachelor's of Technology in Electronics and Communication
+										Engineering
+										from School of Engineering, Tezpur University.</p>
+									<p>&emsp;Currently, I have been working on Computer Vision using Machine Learning
+										and Deep Learning.</p>
+								</div>
+							</div>
+
+							<div id="para2">
+								<p style="text-align: justify;">&emsp;I am a B.Tech undergrad, Front end developer,
+									Data science enthusiast ;
+									Skilled in Python and focused in Machine Learning. I am currently
+									in my last
+									year pursuing Bachelor's of Technology in Electronics and Communication Engineering
+									from
+									School of Engineering, Tezpur University.</p>
+								<p>&emsp;Currently, I have been working
+									on Computer Vision using Machine Learning and Deep Learning.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-12 col-lg-6" id="div2" data-aos="zoom-in">
+					<div class="d-flex justify-content-center" id="mine">
+						<button type="button" class="btn btn-outline-light btn-lg" id="downloadbtn"
+							onclick="window.location.href = 'images/resume.pdf';">Download resume <i
+								class="fa fa-download fa-xs" style="margin-left: 5px;"></i></button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<!--*************************  --  About Section  --  *****************************-->
+
+
+		<div class="about-section">
+			<div class="container d-flex justify-content-center" data-aos="zoom-in">
+				<h2 id="heading">My Journey</h2>
+			</div>
+			<div class="container d-flex justify-content-center">
+				<div class="progress">
+					<div class="progress-value"></div>
+				</div>
+			</div>
+
+			<div class="container" id="bio1">
+				<div class="row">
+					<div class="col-12 col-md-6 col-lg-4" id="eachbio" data-aos="zoom-in">
+						<span><i id="faspan" class="fas fa-id-card fa-4x"></i></span>
+						<div id="biodetaildiv">
+							<h3 class="biodetail">High School</h3>
+							<p class="biodetail">Navarun Jatiya Vidyalaya (KG-10th)</p>
+						</div>
+					</div>
+					<div class="col-12 col-md-6 col-lg-4" id="eachbio" data-aos="zoom-in">
+						<span><i id="faspan" class="fas fa-university fa-4x"></i></span>
+						<div id="biodetaildiv">
+							<h3 class="biodetail">Higher Secondary</h3>
+							<p class="biodetail"><a target="_blank" href="https://cottonuniversity.ac.in/">Cotton
+									University, Panbazar</a></p>
+						</div>
+					</div>
+					<div class="col-12 col-lg-4" id="eachbio" data-aos="zoom-in">
+						<span><i id="faspan" class="fas fa-graduation-cap fa-4x"></i></span>
+						<div id="biodetaildiv">
+							<h3 class="biodetail">Pursuing B.Tech in ECE</h3>
+							<p class="biodetail"><a target="_blank" href="http://www.tezu.ernet.in/">SOE, Tezpur
+									University</a></p>
+						</div>
+					</div>
+					<div class="col-12" id="eachbio" data-aos="zoom-in">
+						<span><i id="faspan" class="fas fa-users fa-4x"></i></span>
+						<div id="biodetaildiv">
+							<h3 class="biodetail">Executive Member at IEEE</h3>
+							<p class="biodetail"><a target="_blank" href="https://ieeetu.herokuapp.com/">Student Branch
+									Chapter, TU</a></p>
+						</div>
+					</div>
+					<div class="col-12 d-flex justify-content-center">
+						<div data-aos="flip-up">
+							<h2 id="workheading">Working Field</h2>
+						</div>
+					</div>
+					<div class="col-12 col-md-6" id="eachbio" data-aos="zoom-in">
+						<span><i id="faspan" class="fas fa-code fa-4x"></i></span>
+						<div id="biodetaildiv">
+							<h3 class="biodetail">Programming Languages</h3>
+							<p class="biodetail">Python, C/C++, R, JavaScript, MySQL etc.</p>
+						</div>
+					</div>
+					<div class="col-12 col-md-6" id="eachbio" data-aos="zoom-in">
+						<span><i id="faspan" class="fas fa-file-code fa-4x"></i></span>
+						<div id="biodetaildiv">
+							<h3 class="biodetail">Skills</h3>
+							<p class="biodetail">Django, Bootstrap, React, ReactNative etc.</p>
+						</div>
+					</div>
+					<div class="col-12" id="eachbio" data-aos="zoom-in">
+						<span><i id="faspan" class="fab fa-dev fa-4x" title="cosmicdwarf's DEV Profile"></i></span>
+						<div id="biodetaildiv">
+							<h3 class="biodetail">DEV Badge</h3>
+							<p class="biodetail">Active member of the DEV community</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<!--*************************  --  Project Section  --  *****************************-->
+
+
+		<div id="project">
+			<div class="container">
+				<div class="col-12 d-flex justify-content-center">
+					<div data-aos="flip-up">
+						<h2 id="projectheading">My Projects</h2>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-4 col-md-6 d-flex justify-content-center">
+						<div data-aos="zoom-in" id="pdiv">
+							<a target="_blank" href="https://heartdisease-cd.herokuapp.com/"><img id="pimg"
+									src="images/projects/heart.png"></a>
+							<a target="_blank" href="https://heartdisease-cd.herokuapp.com/" style="color: white;">
+								<p id="ppara">It’s a fully stacked two-page web application
+									developed using Django framework
+									where I have implem- ented my ML model using Logistic Regression. You can predict
+									whether
+									you
+									have heart disease or not by filling the parameters required to predict in the app.
+								</p>
+							</a>
+						</div>
+					</div>
+
+					<div class="col-lg-4 col-md-6 d-flex justify-content-center">
+						<div data-aos="zoom-in" id="pdiv">
+							<a target="_blank" href="https://abhigyandeka1.netlify.app/"><img id="pimg"
+									src="images/projects/abhi.png"></a>
+							<a target="_blank" href="https://abhigyandeka1.netlify.app/" style="color: white;">
+								<p style="padding-bottom: 80px;" id="ppara">This is a personal portfolio website for a
+									friend of mine on which I've been
+									working on. Only HTML, CSS and javaScript is used in this site.</p>
+							</a>
+						</div>
+					</div>
+
+					<div class="col-lg-4 col-md-6 d-flex justify-content-center">
+						<div data-aos="zoom-in" id="pdiv">
+							<a target="_blank" href="https://github.com/cosmicdwarf/sneakers"><img id="pimg"
+									src="images/projects/sneakers.jpg"></a>
+							<a target="_blank" href="https://github.com/cosmicdwarf/sneakers" style="color: white;">
+								<p style="padding-bottom: 80px;" id="ppara">It’s a front-end ecommerce mobile
+									application
+									developed using React-Native framework where you can navigate through various pages
+									like
+									go to product page, checkout page, account, login, bookmarks and all for now.</p>
+							</a>
+						</div>
+					</div>
+
+					<div class="col-lg-4 col-md-6 d-flex justify-content-center">
+						<div data-aos="zoom-in" id="pdiv">
+							<a target="_blank"
+								href="https://drive.google.com/file/d/1rXTRxbMou0RV-rwMbm_NuZHxtZJnSrsT/view?usp=sharing"><img
+									id="pimg" src="images/projects/mini.jpg"></a>
+							<a target="_blank"
+								href="https://drive.google.com/file/d/1rXTRxbMou0RV-rwMbm_NuZHxtZJnSrsT/view?usp=sharing"
+								style="color: white;">
+								<p style="padding-bottom: 30px;" id="ppara">In this paper, different methods used in the
+									plant recognition and classification field are discussed. The implementation and
+									perfo- rmance of various methods of plant recognition is important for the
+									advancement
+									of
+									these technologies in supporting environment. Hence these methods are reviewed and
+									analysed.</p>
+							</a>
+						</div>
+					</div>
+
+					<div class="col-lg-4 col-md-6 d-flex justify-content-center">
+						<div data-aos="zoom-in" id="pdiv">
+							<a target="_blank" href="https://cosmicdwarf.github.io/"><img id="pimg"
+									src="images/projects/cosmic.png"></a>
+							<a target="_blank" href="https://cosmicdwarf.github.io/" style="color: white;">
+								<p style="padding-bottom: 100px;" id="ppara">This is my personal portfolio web- site
+									that
+									I've
+									developed and designed by myself using HTML, CSS and javaScript.</p>
+							</a>
+						</div>
+					</div>
+
+					<div class="col-lg-4 col-md-6 d-flex justify-content-center">
+						<div data-aos="zoom-in" id="pdiv">
+							<a target="_blank" href="https://bankbranches-cd.herokuapp.com/"><img id="pimg"
+									src="images/projects/bank.png"></a>
+							<a target="_blank" href="https://bankbranches-cd.herokuapp.com/" style="color: white;">
+								<p style="padding-bottom: 80px;" id="ppara">This is a Django web application where you
+									can
+									search for your bank details like branch name, address etc. by giving IFSC code. Or
+									you
+									can filter your search by city and bank name and find bank details.</p>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<!--*************************  --  Contact Section  --  *****************************-->
+
+
+		<div class="contact-section" id="aoscont">
+			<h2 id="contcont"></h2>
+			<div id="conthead" class="d-flex justify-content-center" data-aos="flip-up">
+				<h1 class="text-white" id="contact-heading">Contact Us</h1>
+			</div>
+			<div id="contform">
+				<form name="usrdetail" class="justify-content-center text-white"
+					action="https://formspree.io/f/xwkjbvav" method="POST">
+					<div class="d-flex justify-content-between">
+						<input id="name" class="text-white" type="text" placeholder="Name" name="Name"
+							data-aos="fade-in">
+						<input id="phone" class="text-white" type="text" placeholder="Phone" name="Phone"
+							data-aos="fade-in">
+					</div>
+					<input style="width: 100%;" id="email" class="text-white" type="email" placeholder="Email"
+						name="Email" data-aos="fade-right"><br>
+					<textarea class="text-white" id="messagearea" rows="5" cols="54" name="Message"
+						placeholder="Your message here..." data-aos="zoom-in"></textarea><br>
+					<div class="d-flex justify-content-center">
+						<button class="btn btn-outline-light btn-md" id="submitbtn"
+							data-aos="zoom-in-up">Submit</button>
+					</div>
+				</form>
+			</div>
+
+			<!--------------Feedback section-------------->
+			<!-- <hr id="conthr">
+
+			<h2 id="greetcont"></h2>
+			<div id="conthead" class="d-flex justify-content-center" data-aos="flip-up">
+				<h1 class="text-white" id="contact-heading">Feedback</h1>
+			</div>
+
+			<div id="usrform">
+				<form class="text-white" action="https://formspree.io/f/xyybnvjy" method="POST">
+					<div id="feeddiv" data-aos="flip-down">
+						<textarea class="text-white" id="textarea" name="Message" rows="5" cols="70"
+							placeholder="Enter text here..."></textarea>
+					</div>
+					<div id="feedform" data-aos="fade-down" style="margin: 20px;">
+						<input class="text-white" id="feedname" type="text" placeholder="Your Name" name="Name">
+						<button class="btn btn-outline-light btn-sm" id="feedbtn">Send</button>
+					</div>
+				</form>
+			</div> -->
+
+
+
+			<!--*************************  --  Footer Section  --  *****************************-->
+
+
+			<hr>
+
+			<footer class="row">
+				<div class="col-12 col-lg-6">
+					<h2 id="addhead">ADDRESS</h2>
+					<address>
+						Patkai Men's Hostel<br>
+						Tezpur University, Napaam<br>
+						<i class="fa fa-phone"></i>
+						<a href="tel:7002031369">+91 7002031369</a><br>
+						<i class="fa fa-envelope"></i>
+						<a href="mailto:ghritakjyotikalita@gmail.com">ghritakjyotikalita@gmail.com</a>
+					</address>
+				</div>
+				<div class="col-12 col-lg-6">
+					<h2 id="follow">Follow Me On</h2>
+					<div class="d-flex justify-content-center" id="socialdiv">
+						<a target="_blank" href="https://www.linkedin.com/in/ghritak-jyoti-kalita-a1915415a/"><i
+								class="fa fa-linkedin fa-2x" id="social" data-aos="zoom-in"></i></a>
+						<a target="_blank" href="https://github.com/cosmicdwarf" data-aos="zoom-in"><i
+								class="fa fa-github fa-2x" id="social"></i></a>
+						<a target="_blank" href="https://www.instagram.com/ghritak_" data-aos="zoom-in"><i
+								class="fa fa-instagram fa-2x" id="social"></i></a>
+					</div>
+					<p class="d-flex justify-content-center" id="copyright">© 2023 cosmicdwarf</p>
+				</div>
+			</footer>
+		</div>
+
+
+
+		<script src="https://code.jquery.com/jquery-3.6.3.min.js"
+			integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+			integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+			crossorigin="anonymous"></script>
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+		<script src="js/script.js"></script>
+		<script type="text/javascript">
+			$(function () {
+				AOS.init({
+					duration: 1000,
+				});
+			});
+
+			// Navbar toggler hamburger animation
+
+			$(document).ready(function () {
+				$(".nav-item").click(function () {
+					$("#check").prop("checked", false);
+				});
+				$('#nav-icon').click(function () {
+					$(this).toggleClass('open');
+				});
+				$('.nav-item').click(function () {
+					$('#nav-icon').toggleClass('open');
+				});
+			});
+		</script>
+		<script type="text/javascript">
+			$(document).ready(function () {
+				$("#aboutme").click(function () {
+					$("#para").toggleClass('active')
+					$(".fa-angle-up").toggleClass('active')
+					$(".fa-angle-down").toggleClass('active')
+				})
+			})
+		</script>
+	</body>
+
+</html>
