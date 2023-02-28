@@ -1,7 +1,7 @@
 //---------------------Loader--------------------------- 
 
 window.onload = function () {
-  document.querySelector('.loader-container').style.display = 'none';
+  document.querySelector('.loading-container').style.display = 'none';
 };
 
 
