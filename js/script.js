@@ -18,9 +18,7 @@ window.onload = function () {
       delay: 1000
     });
   document.querySelector('.loading-container').style.display = 'none';
-  AOS.init({
-    duration: 1000,
-  });
+
 };
 
 
