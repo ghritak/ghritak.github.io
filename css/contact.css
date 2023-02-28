@@ -3,7 +3,6 @@ body{
 }
 #aoscont{
 	overflow-x: hidden;
-	padding-bottom: 100px;
 }
 *, *:before, *:after { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 .aos-all {
@@ -13,63 +12,21 @@ body{
 	overflow: hidden;
 	margin: 0;
 }
+.contact-section{
+	padding-top: 50px;
+	/* background-color: #292929; */
+	background-image: linear-gradient(
+    to bottom,
+    rgba(35, 35, 35, 1.5),
+    rgba(0, 0, 0, 1)
+  );
+  padding-bottom: 30px;
+}
+#contact-heading{
+	border-bottom: 2px solid currentColor;
+	border-color: rgb(60, 184, 121);
+}
 
-/*---------------Navigation Bar------------------*/
-#navul{
-	float: right;
-	min-width:60%;
-	font-size: 23px;
-	font-family: 'Dubai light';
-	padding-top: 15px;
-}
-li{
-	color: white;
-}
-label.logo{
-	font-size: 250%;
-	font-style: italic;
-	font-weight: bold;
-	color: white;
-	margin: auto;
-	padding-left: 30px;
-	padding-bottom: 4px;
-}
-nav{
-	background-color: black;
-	position: fixed;
-	width: 100%;
-	z-index: 1;
-	max-height: 65px;
-}
-a{
-	color: #ffffff;
-	transition: font-size .2s;
-}
-.checkbtn{
-	font-size: 25px;
-	color: white;
-	float: right;
-	padding-top: 7px;
-	margin-right: 20px;
-	cursor: pointer;
-	display: none;
-	z-index: 1;
-}
-#check{
-	display: none;
-}
-#navli:hover{
-	font-size: 25px;
-}
-#navli{
-	list-style: none;
-    float: right;
-	min-height: 40px;
-}
-a:hover{
-	text-decoration: none;
-	color: #007bff;
-}
 
 /*----------------Feed typewriter----------------*/
 
@@ -90,42 +47,6 @@ a:hover{
   }
 }
 
-/*----------------Feedback-----------------*/
-
-#feedhead{
-	padding-top: 30px;
-	text-align: center;
-}
-#textarea{
-	background-color: #0d0d0d;
-	margin: 0 auto;
-	border-radius: 10px;
-	border-color: #000080;
-	box-shadow: 0px 0px 30px 5px #000080;
-}
-#feeddiv{
-	padding-top: 30px;
-	display: flex;
-	justify-content: center;
-}
-#feedform{
-	padding-top: 45px;
-	display: flex;
-	justify-content: center;
-}
-#submitname{
-	margin-left: 20px;
-	margin-right: 70px;
-	height: 40px;
-	background-color: #0d0d0d;
-	border-radius: 5px;
-	border-color: #000080;
-	box-shadow: 0px 0px 10px 7px #000080;
-}
-.btn:hover{
-	background-color: #000080;
-	box-shadow: 0px 0px 10px 7px #000080;
-}
 
 /*---------------Cont typewriter---------------*/
 
@@ -155,7 +76,7 @@ a:hover{
     width: 350px;
     border: 0;
     height: 1px;
-    background-image: linear-gradient(to right, rgba(0, 0, 0), rgba(255, 255, 255, 0.9), rgba(0, 0, 0));
+    background-image: linear-gradient(to right, #292929, rgba(255, 255, 255, 0.9), #292929);
 }
 
 /*---------------Contact-----------------*/
@@ -168,43 +89,72 @@ a:hover{
 	margin-top: 45px;
 	display: flex;
 	justify-content: center;
+	margin-bottom: 50px;
 }
-#firstname, #lastname, #email{
-	box-shadow: 0px 0px 7px 3px #000080;
-	background-color: #0d0d0d;
-	border-radius: 5px;
-	border-color: #000080;
-	margin-top: 15px;
-	padding: 5px;
-	width: 100%;
+#name, #phone, #email, #messagearea{
+	background-color: #3a3a3a;
+	border: None;
+	padding: 30px;
+	border-radius: 50px;
+	outline: none;
 }
-#firstname{
-	margin-right: 20px;
+#name{
+	margin-right: 5px;
 }
-#email{
-	margin-bottom: 15px;
-}
-#phonelabel{
-	min-width: 60px;
+#name:hover, #phone:hover, #email:hover, #messagearea:hover, #textarea:hover, #feedname:hover{
+	box-shadow: 5px 7px 15px #2e2e2e;
 }
 #phone{
-	box-shadow: 0px 0px 7px 3px #000080;
-	border-radius: 5px;
-	border-color: #000080;
-	background-color: #0d0d0d;
-	padding: 5px;
-	width: 100%;
-	margin-left: 10px;
+	margin-left: 5px;
 }
-#messagearea{
-	box-shadow: 0px 0px 7px 3px #000080;
-	background-color: #0d0d0d;
-	border-radius: 5px;
-	border-color: #000080;
-	margin-top: 15px;
+#name, #phone{
+	height: 60px;
+	margin-bottom: 20px;
+	padding-inline: 45px;
+}
+#email{
+	height: 60px;
+	margin-bottom: 20px;
 }
 #submitbtn{
-	margin-top: 10px;
+	margin-top: 20px;
+	padding: 15px;
+	width: 150px;
+	border-radius: 50px;
+}
+
+/*----------------Feedback-----------------*/
+
+#textarea{
+	background-color: #3a3a3a;
+	border-radius: 50px;
+	border: None;
+	padding: 30px;
+	outline: none;
+}
+#feeddiv{
+	padding-top: 30px;
+	display: flex;
+	justify-content: center;
+}
+#feedform{
+	padding-top: 45px;
+	display: flex;
+	justify-content: center;
+}
+#feedname{
+	margin-right: 70px;
+	height: 60px;
+	padding: 30px;
+	background-color: #3a3a3a;
+	border-radius: 50px;
+	border: None;
+	outline: none;
+}
+#feedbtn{
+	padding: 15px;
+	width: 150px;
+	border-radius: 50px;
 }
 
 
@@ -214,7 +164,7 @@ a:hover{
 hr{
 	width: 90%;
 	height: 1px;
-	background-image: linear-gradient(to right, rgba(0, 0, 0), rgba(255, 255, 255), rgba(0, 0, 0));
+	background-image: linear-gradient(to right, #292929, rgba(255, 255, 255), #292929);
 }
 footer{
 	color: white;
@@ -242,47 +192,6 @@ address{
 
 
 @media screen and (max-width: 992px){
-	
-/*---------------Nav Bar--------------*/
-
-	label.logo{
-		display: none;
-	}
-	nav ul li a{
-		font-size: 20px;
-	}
-	.checkbtn{
-		display: block;
-	}
-	#nav{
-		z-index: 0;
-	}
-	#navul{
-		position: fixed;
-		width: 110%;
-		background: rgba(0, 0, 0, 0.8);
-		top: -170px;
-		left: 1.5%;
-		float: left;
-		transition: all .5s;
-		padding-bottom: 0px;
-		padding-left: 20px;
-		padding-top: 0px;
-		max-height: 200px;
-		z-index: 0;
-	}
-	#navli{
-		list-style: none;
-		min-height: 40px;
-		min-width: 200px;
-	}
-	li.a:hover{
-		text-decoration: none;
-		color: #007bff;
-	}
-	#check:checked ~ ul{
-		top: 10px;
-	}
 
 /*------------------Footer--------------------*/
 
@@ -305,29 +214,41 @@ address{
 	#greetcont{
 		padding-top: 70px;
 	}
-	#submitname{
-		margin-right: 30px;
+	#feedform{
+		padding-top: 0px;
+		margin: 0px;
+	}
+	#textarea{
+		margin-inline: 20px;
+	}
+	#feedname{
+		padding: 15px;
+		padding-left: 20px;
+		height: 50px;
+		margin-right: 10px;
+		margin-left: 10px;
+	}
+	#feedbtn{
+		margin-left: 15px;
+		margin-right: 10px;
+		height: 50px;
 	}
 	#conthr{
 		width: 60%;
 	}
-	#firstname, #lastname, #email{
-		padding: 5px;
-
+	#name, #phone, #email{
+		padding: 15px;
+		padding-left: 20px;
+		height: 50px;
 	}
-	#firstname, #email, #phonelabel, #tndc, #messagearea{
-		margin-left: 15px;
-	}
-	#firstname, #lastname{
+	#name, #phone{
 		width: 160px;
 	}
 	#email{
 		width: 345px;
 	}
-	#phone{
-		width: 265px;
-	}
 	#messagearea{
 		max-width: 340px;
+		padding: 20px;
 	}
 }

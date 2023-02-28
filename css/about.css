@@ -1,3 +1,13 @@
+.about-section{
+	padding-top: 150px;
+	background-image: linear-gradient(
+    to bottom,
+    rgb(45, 45, 88),
+    rgba(0, 0, 0, 1)
+  );
+  /* background: linear-gradient(45deg, rgba(0, 0, 0, 1), rgba(35, 35, 35, 1.5)); */
+}
+
 /*----------------Progress Bar------------------*/
 
 .progress{
@@ -31,7 +41,6 @@
 
 #heading{
 	text-align: center;
-	padding-top: 120px;
 	color: white;
 }
 #workheading{
@@ -98,6 +107,9 @@ p.biodetail{
 @media screen and (max-width: 432px){
 	#heading{
 		padding-top: 70px;
+	}
+	.about-section{
+		padding-top: 30px;
 	}
 }
 
