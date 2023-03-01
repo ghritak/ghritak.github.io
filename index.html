@@ -19,8 +19,12 @@
 	</head>
 
 	<body>
-		<div class="loader-container">
+		<!-- <div class="loader-container">
 			<div class="loader"></div>
+		</div> -->
+		<div class="loading-container">
+			<div class="loading"></div>
+			<div id="loading-text">loading</div>
 		</div>
 
 
@@ -42,13 +46,13 @@
 		<div style="padding-bottom: 20px;" id="mypage">
 			<div class="container" id="aoscont">
 				<div class="row" id="div1">
-					<div class="col-12 col-lg-6 d-flex justify-content-center" data-aos="zoom-in">
+					<div class="col-12 col-lg-5 d-flex justify-content-center" data-aos="zoom-in">
 						<div class="d-flex align-items-center">
 							<img id="myimg" src="images/img.webp" alt="My Image">
 						</div>
 					</div>
 
-					<div class="col-12 col-lg-6" id="header">
+					<div class="col-12 col-lg-5" id="header">
 						<div id="headtext" style="padding-bottom: 20px; padding-top: 50px;">
 							<h1 class="ml10">
 								<span class="text-wrapper">
@@ -194,93 +198,179 @@
 						<h2 id="projectheading">My Projects</h2>
 					</div>
 				</div>
+
 				<div class="row">
-					<div class="col-lg-4 col-md-6 d-flex justify-content-center">
-						<div data-aos="zoom-in" id="pdiv">
-							<a target="_blank" href="https://heartdisease-cd.herokuapp.com/"><img id="pimg"
-									src="images/projects/heart.png"></a>
-							<a target="_blank" href="https://heartdisease-cd.herokuapp.com/" style="color: white;">
-								<p id="ppara">It’s a fully stacked two-page web application
-									developed using Django framework
-									where I have implem- ented my ML model using Logistic Regression. You can predict
-									whether
-									you
-									have heart disease or not by filling the parameters required to predict in the app.
-								</p>
-							</a>
-						</div>
+					<div class="col-12 col-lg-6 d-flex justify-content-center" id="project_card" data-aos="zoom-in">
+						<a target="blank" href="https://heartdisease-cd.herokuapp.com/">
+							<div class="card mb-3" style="max-width: 540px; background-color: #202124; color: white;">
+								<div class="row g-0">
+									<div class="col-6 col-md-4">
+										<img src="images/projects/heart.png" class="img-fluid rounded-start"
+											style="min-height: 100%;" alt="...">
+									</div>
+									<div class="col-6 col-md-8">
+										<div class="card-body">
+											<h5 class="card-title">Heart Disease Prediction</h5>
+											<p style="text-align: left; font-size: small;" id="card-para">It’s a fully
+												stacked two-page web application developed using Django framework
+												where I have implem- ented my ML model using Logistic Regression.
+											</p>
+											<button id="popover" type="button" data-bs-container="body"
+												data-bs-toggle="popover" data-bs-placement="top"
+												data-bs-content="Top popover">
+												Click
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</a>
 					</div>
 
-					<div class="col-lg-4 col-md-6 d-flex justify-content-center">
-						<div data-aos="zoom-in" id="pdiv">
-							<a target="_blank" href="https://abhigyandeka1.netlify.app/"><img id="pimg"
-									src="images/projects/abhi.png"></a>
-							<a target="_blank" href="https://abhigyandeka1.netlify.app/" style="color: white;">
-								<p style="padding-bottom: 80px;" id="ppara">This is a personal portfolio website for a
-									friend of mine on which I've been
-									working on. Only HTML, CSS and javaScript is used in this site.</p>
-							</a>
-						</div>
+					<div class="col-12 col-lg-6 d-flex justify-content-center" id="project_card" data-aos="zoom-in">
+						<a target="blank" href="https://abhigyandeka1.netlify.app/">
+							<div class="card mb-3" style="max-width: 540px; background-color: #202124; color: white;">
+								<div class="row g-0">
+									<div class="col-6 col-md-4">
+										<img src="images/projects/abhi.png" class="img-fluid rounded-start"
+											style="min-height: 100%;" alt="...">
+									</div>
+									<div class="col-6 col-md-8">
+										<div class="card-body">
+											<h5 class="card-title">Personal Portfolio</h5>
+											<p class="card-text" id="card-para"
+												style="font-size: small; text-align: left;">This is a
+												personal portfolio website for a friend of mine on which I've been
+												working on. Only HTML, CSS and javaScript is used in this site.
+											</p>
+											<button id="popover" type="button" data-bs-container="body"
+												data-bs-toggle="popover" data-bs-placement="top"
+												data-bs-content="Top popover">
+												Click
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</a>
 					</div>
 
-					<div class="col-lg-4 col-md-6 d-flex justify-content-center">
-						<div data-aos="zoom-in" id="pdiv">
-							<a target="_blank" href="https://github.com/cosmicdwarf/sneakers"><img id="pimg"
-									src="images/projects/sneakers.jpg"></a>
-							<a target="_blank" href="https://github.com/cosmicdwarf/sneakers" style="color: white;">
-								<p style="padding-bottom: 80px;" id="ppara">It’s a front-end ecommerce mobile
-									application
-									developed using React-Native framework where you can navigate through various pages
-									like
-									go to product page, checkout page, account, login, bookmarks and all for now.</p>
-							</a>
-						</div>
+					<div class="col-12 col-lg-6 d-flex justify-content-center" id="project_card" data-aos="zoom-in">
+						<a target="blank"
+							href="https://drive.google.com/file/d/1rXTRxbMou0RV-rwMbm_NuZHxtZJnSrsT/view?usp=sharing">
+							<div class="card mb-3" style="max-width: 540px; background-color: #202124; color: white;">
+								<div class="row g-0">
+									<div class="col-6 col-md-4">
+										<img src="images/projects/mini.jpg" class="img-fluid rounded-start"
+											style="min-height: 100%;" alt="...">
+									</div>
+									<div class="col-6 col-md-8">
+										<div class="card-body">
+											<h5 class="card-title">Plant Leaf Classification</h5>
+											<p class="card-text" id="card-para"
+												style="font-size: small; text-align: left;">Here, we have done
+												classification of plant leaf by using various
+												pre-processing and feature extraction method and then fed them to
+												classifier with the help of ML and DL.
+											</p>
+											<button id="popover" type="button" data-bs-container="body"
+												data-bs-toggle="popover" data-bs-placement="top"
+												data-bs-content="Top popover">
+												Click
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</a>
 					</div>
 
-					<div class="col-lg-4 col-md-6 d-flex justify-content-center">
-						<div data-aos="zoom-in" id="pdiv">
-							<a target="_blank"
-								href="https://drive.google.com/file/d/1rXTRxbMou0RV-rwMbm_NuZHxtZJnSrsT/view?usp=sharing"><img
-									id="pimg" src="images/projects/mini.jpg"></a>
-							<a target="_blank"
-								href="https://drive.google.com/file/d/1rXTRxbMou0RV-rwMbm_NuZHxtZJnSrsT/view?usp=sharing"
-								style="color: white;">
-								<p style="padding-bottom: 30px;" id="ppara">In this paper, different methods used in the
-									plant recognition and classification field are discussed. The implementation and
-									perfo- rmance of various methods of plant recognition is important for the
-									advancement
-									of
-									these technologies in supporting environment. Hence these methods are reviewed and
-									analysed.</p>
-							</a>
-						</div>
+					<div class="col-12 col-lg-6 d-flex justify-content-center" id="project_card" data-aos="zoom-in">
+						<a target="blank" href="https://github.com/cosmicdwarf/sneakers">
+							<div class="card mb-3" style="max-width: 540px; background-color: #202124; color: white;">
+								<div class="row g-0">
+									<div class="col-6 col-md-4">
+										<img src="images/projects/sneakers.jpg" class="img-fluid rounded-start"
+											style="min-height: 100%;" alt="...">
+									</div>
+									<div class="col-6 col-md-8">
+										<div class="card-body">
+											<h5 class="card-title">Sneakers Mobile App</h5>
+											<p class="card-text" id="card-para"
+												style="font-size: small; text-align: left;">It’s a front-end ecommerce
+												mobile
+												application
+												developed using React-Native framework where you can navigate through
+												various pages to purchase an item.
+											</p>
+											<button id="popover" type="button" data-bs-container="body"
+												data-bs-toggle="popover" data-bs-placement="top"
+												data-bs-content="Top popover">
+												Click
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</a>
 					</div>
 
-					<div class="col-lg-4 col-md-6 d-flex justify-content-center">
-						<div data-aos="zoom-in" id="pdiv">
-							<a target="_blank" href="https://cosmicdwarf.github.io/"><img id="pimg"
-									src="images/projects/cosmic.png"></a>
-							<a target="_blank" href="https://cosmicdwarf.github.io/" style="color: white;">
-								<p style="padding-bottom: 100px;" id="ppara">This is my personal portfolio web- site
-									that
-									I've
-									developed and designed by myself using HTML, CSS and javaScript.</p>
-							</a>
-						</div>
+					<div class="col-12 col-lg-6 d-flex justify-content-center" id="project_card" data-aos="zoom-in">
+						<a target="blank" href="https://cosmicdwarf.github.io/">
+							<div class="card mb-3" style="max-width: 540px; background-color: #202124; color: white;">
+								<div class="row g-0">
+									<div class="col-6 col-md-4">
+										<img src="images/projects/cosmic.png" class="img-fluid rounded-start"
+											style="min-height: 100%;" alt="...">
+									</div>
+									<div class="col-6 col-md-8">
+										<div class="card-body">
+											<h5 class="card-title">Personal Portfolio</h5>
+											<p class="card-text" id="card-para"
+												style="font-size: small; text-align: left;">This is my personal
+												portfolio web- site
+												that
+												I've
+												developed and designed by myself using HTML, CSS and javaScript.
+											</p>
+											<button id="popover" type="button" data-bs-container="body"
+												data-bs-toggle="popover" data-bs-placement="top"
+												data-bs-content="Top popover">
+												Click
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</a>
 					</div>
 
-					<div class="col-lg-4 col-md-6 d-flex justify-content-center">
-						<div data-aos="zoom-in" id="pdiv">
-							<a target="_blank" href="https://bankbranches-cd.herokuapp.com/"><img id="pimg"
-									src="images/projects/bank.png"></a>
-							<a target="_blank" href="https://bankbranches-cd.herokuapp.com/" style="color: white;">
-								<p style="padding-bottom: 80px;" id="ppara">This is a Django web application where you
-									can
-									search for your bank details like branch name, address etc. by giving IFSC code. Or
-									you
-									can filter your search by city and bank name and find bank details.</p>
-							</a>
-						</div>
+					<div class="col-12 col-lg-6 d-flex justify-content-center" id="project_card" data-aos="zoom-in">
+						<a target="blank" href="https://bankbranches-cd.herokuapp.com/">
+							<div class="card mb-3" style="max-width: 540px; background-color: #202124; color: white;">
+								<div class="row g-0">
+									<div class="col-6 col-md-4">
+										<img src="images/projects/bank.png" class="img-fluid rounded-start"
+											style="min-height: 100%;" alt="...">
+									</div>
+									<div class="col-6 col-md-8">
+										<div class="card-body">
+											<h5 class="card-title">Check Your Bank</h5>
+											<p class="card-text" id="card-para"
+												style="font-size: small; text-align: left;">This is a Django web
+												application where you can search for your bank details by giving
+												IFSC code or city and bank name as input and it filters the output.
+											</p>
+											<button id="popover" type="button" data-bs-container="body"
+												data-bs-toggle="popover" data-bs-placement="top"
+												data-bs-content="Top popover">
+												Click
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</a>
 					</div>
 				</div>
 			</div>
@@ -300,12 +390,12 @@
 					action="https://formspree.io/f/xwkjbvav" method="POST">
 					<div class="d-flex justify-content-between">
 						<input id="name" class="text-white" type="text" placeholder="Name" name="Name"
-							data-aos="fade-in">
+							data-aos="zoom-in">
 						<input id="phone" class="text-white" type="text" placeholder="Phone" name="Phone"
-							data-aos="fade-in">
+							data-aos="zoom-in">
 					</div>
 					<input style="width: 100%;" id="email" class="text-white" type="email" placeholder="Email"
-						name="Email" data-aos="fade-right"><br>
+						name="Email" data-aos="flip-up"><br>
 					<textarea class="text-white" id="messagearea" rows="5" cols="54" name="Message"
 						placeholder="Your message here..." data-aos="zoom-in"></textarea><br>
 					<div class="d-flex justify-content-center">
@@ -382,6 +472,7 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 		<script src="js/script.js"></script>
 		<script type="text/javascript">
+
 			$(function () {
 				AOS.init({
 					duration: 1000,

@@ -5,14 +5,14 @@
   overflow-x: hidden;
   padding-bottom: 10px;
 }
-#mypage{
+
+#mypage {
   /* background: linear-gradient(135deg, rgba(0, 0, 0, 1), rgba(35, 35, 35, 1.5)); */
-  background-image: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 1),
-    rgb(45, 45, 88)
-  );
+  background-image: linear-gradient(to bottom,
+      rgba(0, 0, 0, 1),
+      rgb(45, 45, 88));
 }
+
 /*---------------Navigation Bar------------------*/
 
 ul {
@@ -23,6 +23,7 @@ ul {
   padding-top: 15px;
   z-index: 0;
 }
+
 label.logo {
   font-size: 250%;
   font-style: italic;
@@ -32,6 +33,7 @@ label.logo {
   padding-left: 30px;
   padding-bottom: 4px;
 }
+
 nav {
   background-color: rgba(0, 0, 0, 0.8);
   position: fixed;
@@ -40,11 +42,13 @@ nav {
   width: 100%;
   padding-bottom: 5px;
 }
+
 a {
   cursor: pointer;
   color: #ffffff;
   transition: font-size 0.2s;
 }
+
 .checkbtn {
   color: white;
   float: right;
@@ -54,14 +58,17 @@ a {
   display: none;
   z-index: 1;
 }
+
 #check {
   display: none;
 }
+
 li {
   list-style: none;
   float: right;
   min-height: 40px;
 }
+
 a#nav-home:hover,
 a#nav-about:hover,
 a#nav-gallery:hover,
@@ -69,6 +76,7 @@ a#nav-project:hover,
 a#nav-contact:hover {
   color: #007bff;
 }
+
 a:hover {
   text-decoration: none;
   color: #007bff;
@@ -89,48 +97,60 @@ a:hover {
   height: 300px;
   border-radius: 50%;
 }
+
 #myimg:hover {
   transition: all 0.4s;
   width: 315px;
   height: 315px;
 }
+
 #div1 {
   padding-top: 200px;
 }
+
 h1 {
   font-size: 39px;
   font-family: Droid Serif, sans-serif;
 }
+
 .ml10 .letter {
   display: inline-block;
   transform-origin: 0 0;
 }
+
 h2 {
   font-size: 28px;
 }
+
 #para2 {
   animation: fadeInUp 2s;
 }
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
     transform: translate3d(0, 25px, 0);
   }
+
   to {
     opacity: 1;
     transform: none;
   }
 }
+
 .fadeInUp {
   animation-name: fadeInUp;
 }
+
 p {
   font-family: "Open Sans", sans-serif;
   font-weight: 300;
 }
+
 #div2 {
   padding-top: 50px;
 }
+
 #downloadbtn {
   font-family: "Jura", sans-serif;
   text-transform: uppercase;
@@ -139,7 +159,8 @@ p {
   padding-inline: 30px;
   transition: all 0.3s ease-in-out;
 }
-#downloadbtn:hover{
+
+#downloadbtn:hover {
   background-color: rgb(59, 59, 108);
   color: white;
 }
@@ -160,7 +181,8 @@ p {
   transition: background-color 0.3s ease;
 }
 
-.active, .collapsible:hover {
+.active,
+.collapsible:hover {
   background-color: #555;
 }
 
@@ -172,77 +194,101 @@ p {
   transition: max-height 0.3s ease;
 }
 
-.active + .content {
-  max-height: 500px; /* Set to a value larger than your content */
+.active+.content {
+  max-height: 500px;
+  /* Set to a value larger than your content */
   transition: max-height 0.3s ease;
 }
 
-
-
-#aboutme{
+#aboutme {
   display: none;
 }
-.btn{
+
+.btn {
   border-radius: 0px;
 }
+
 #para {
   color: white;
   position: absolute;
   top: -280px;
   transition: all 0.5s ease-in-out;
 }
-#para2{
+
+#para2 {
   color: white;
   padding-top: 30px;
 }
-.fa-angle-up{
+
+.fa-angle-up {
   display: none;
 }
-.fa-angle-up.active{
+
+.fa-angle-up.active {
   display: inline-block;
-  background-color: rgb(59, 59, 108,0);
+  background-color: rgb(59, 59, 108, 0);
 }
-.fa-angle-down{
+
+.fa-angle-down {
   display: inline-block;
-  background-color: rgb(59, 59, 108,0);
+  background-color: rgb(59, 59, 108, 0);
 }
-.fa-angle-down.active{
+
+.fa-angle-down.active {
   display: none;
 }
 
 
 /*-----------------Projects------------------*/
 
-#project{
+#project_card{
+  transition: all 0.3s ease-in-out;
+}
+#project_card:hover {
+  transform: scale(1.05);
+  transition: all 0.3s ease-in-out;
+}
+#project_card img{
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
+
+#popover{
+  display: none;
+}
+
+#project {
   padding-top: 70px;
   padding-bottom: 50px;
-  background-image: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 1),
-    rgba(35, 35, 35, 1.5)
-  );
+  background-image: linear-gradient(to bottom,
+      rgba(0, 0, 0, 1),
+      rgba(35, 35, 35, 1.5));
 }
-#projectheading{
-	text-align: center;
-	color: white;
-	padding-top: 30px;
-	padding-bottom: 10px;
-	margin-bottom: 40px;
-	border-bottom: 2px solid currentColor;
-	border-color: rgb(60, 184, 121);
-	width: 110%;
+
+#projectheading {
+  text-align: center;
+  color: white;
+  padding-top: 30px;
+  padding-bottom: 10px;
+  margin-bottom: 40px;
+  border-bottom: 2px solid currentColor;
+  border-color: rgb(60, 184, 121);
+  width: 110%;
 }
-#pdiv{
+
+#pdiv {
   position: relative;
 }
-#pimg{
+
+#pimg {
   width: 300px;
   margin-top: 70px;
   border-color: black;
   border-radius: 2%;
   transition: 0.2s;
 }
-#pdiv #ppara{
+
+#pdiv #ppara {
   padding: 20px;
   text-align: justify;
   position: absolute;
@@ -251,46 +297,30 @@ p {
   right: 0;
   padding-bottom: 50px;
   visibility: hidden;
-  -webkit-transition: visibility 0s, opacity 0.5s linear; 
+  -webkit-transition: visibility 0s, opacity 0.5s linear;
   transition: visibility 0s, opacity 0.5s linear;
 }
-#pdiv:hover{
+
+#pdiv:hover {
   cursor: pointer;
 }
-#pdiv:hover #ppara{
-  visibility: visible; 
+
+#pdiv:hover #ppara {
+  visibility: visible;
 }
-#pdiv:hover #pimg{
+
+#pdiv:hover #pimg {
   color: rgb(60, 184, 121);
   opacity: 0.3;
   transition: 0.2s;
   -webkit-filter: blur(4px);
   filter: blur(4px);
 }
-#pimg:hover{
+
+#pimg:hover {
   -webkit-filter: blur(4px);
   filter: blur(4px);
 }
-
-/*
-#pdiv:hover{
-  cursor: pointer;
-}
-#pdiv:hover #ppara{
-  visibility: visible;
-  opacity: 0.7; 
-}
-#pdiv:hover #pimg{
-  color: rgb(60, 184, 121);
-  -webkit-filter: blur(4px);
-  filter: blur(4px);
-}
-#pimg:hover{
-  -webkit-filter: blur(4px);
-  filter: blur(4px);
-}*/
-
-
 
 
 /*-----------------Footer------------------*/
@@ -298,47 +328,45 @@ p {
 hr {
   width: 90%;
   height: 1px;
-  background-image: -webkit-linear-gradient(
-    to right,
-    rgba(0, 0, 0),
-    rgba(255, 255, 255),
-    rgba(0, 0, 0)
-  );
-  background-image: -o-linear-gradient(
-    to right,
-    rgba(0, 0, 0),
-    rgba(255, 255, 255),
-    rgba(0, 0, 0)
-  );
-  background-image: -moz-linear-gradient(
-    to right,
-    rgba(0, 0, 0),
-    rgba(255, 255, 255),
-    rgba(0, 0, 0)
-  );
-  background-image: linear-gradient(
-    to right,
-    rgba(0, 0, 0),
-    rgba(255, 255, 255),
-    rgba(0, 0, 0)
-  );
+  background-image: -webkit-linear-gradient(to right,
+      rgba(0, 0, 0),
+      rgba(255, 255, 255),
+      rgba(0, 0, 0));
+  background-image: -o-linear-gradient(to right,
+      rgba(0, 0, 0),
+      rgba(255, 255, 255),
+      rgba(0, 0, 0));
+  background-image: -moz-linear-gradient(to right,
+      rgba(0, 0, 0),
+      rgba(255, 255, 255),
+      rgba(0, 0, 0));
+  background-image: linear-gradient(to right,
+      rgba(0, 0, 0),
+      rgba(255, 255, 255),
+      rgba(0, 0, 0));
 }
+
 footer {
   color: white;
   padding-top: 30px;
 }
+
 #addhead {
   text-align: center;
 }
+
 address {
   text-align: center;
 }
+
 #follow {
   text-align: center;
 }
+
 #social {
   padding: 10px;
 }
+
 #copyright {
   padding-top: 10px;
   font-family: OpenSans, Arial, sans-serif;
@@ -352,12 +380,15 @@ address {
   label.logo {
     display: none;
   }
+
   nav ul li a {
     font-size: 20px;
   }
+
   .checkbtn {
     display: block;
   }
+
   ul {
     position: absolute;
     width: 110%;
@@ -371,58 +402,72 @@ address {
     padding-left: 20px;
     max-height: 200px;
   }
+
   #navul {
     padding-left: 20px;
   }
+
   li {
     list-style: none;
     min-height: 40px;
     max-width: 200px;
   }
+
   li.a:hover {
     text-decoration: none;
     color: #007bff;
   }
-  #check:checked ~ ul {
+
+  #check:checked~ul {
     top: 10px;
   }
 
   /*-----------------Divs-----------------*/
 
   #div1 {
-    padding-top: 100px;
+    padding-top: 200px;
+    margin-top: 50px;
   }
+
   #myimg {
     width: 200px;
     height: 200px;
     margin-top: 50px;
   }
+
   #myimg:hover {
     width: 200px;
     height: 200px;
   }
+
   h1 {
     font-size: 30px;
     text-align: center;
   }
+
   h4 {
     font-size: 20px;
     text-align: center;
   }
+
   h2 {
     font-size: 23px;
     text-align: center;
   }
+
   p {
     text-align: center;
   }
+
   #headtext {
     padding-top: 30px;
   }
-  #downloadbtn:hover{
+
+  #downloadbtn:hover {
     background-color: rgb(100, 100, 159, 0);
   }
-  #downloadbtn:active{
+
+  #downloadbtn:active {
     background-color: rgb(100, 100, 159);
     color: white;
     transition: all 0.5s;
@@ -430,10 +475,11 @@ address {
 
   /*---------------About Me-----------------*/
 
-  #para2{
+  #para2 {
     display: none;
   }
-  #aboutme{
+
+  #aboutme {
     display: block;
     padding: 15px;
     border-radius: 50px;
@@ -444,7 +490,8 @@ address {
     border-color: white;
     color: white;
   }
-  #aboutme:active{
+
+  #aboutme:active {
     background-color: rgb(100, 100, 159);
     color: white;
     transition: all 0.5s;
@@ -455,30 +502,65 @@ address {
   #follow {
     padding-top: 15px;
   }
+
   #socialdiv {
     padding-bottom: 10px;
   }
+
   #copyright {
     padding-bottom: 20px;
   }
 }
+
 @media screen and (max-width: 432px) {
-  h1{
+  h1 {
     font-size: 28px;
   }
+
   #div1 {
     padding-top: 70px;
   }
-  #pimg #ppara{
+
+  #pimg #ppara {
     width: 270px;
   }
-  #aboutme{
+
+  #aboutme {
     padding: 15px;
     border-radius: 50px;
     padding-inline: 30px;
     transition: all 0.5s ease-in-out;
   }
-  #project{
+
+  #project {
     padding-top: 20px;
+  }
+  #project_card{
+    border-radius: 50px;
+    pointer-events: none;
+  }
+  #project_card:hover{
+    transform: scale(1);
+  }
+  .card-body{
+    padding-left: 0px;
+  }
+  #card-para{
+    display: none;
+  }
+  #popover{
+    display: block;
+    pointer-events: all;
+    padding: 5px;
+    padding-inline: 15px;
+    transition: all 0.5s ease-in-out;
+    background-color: rgba(60, 73, 78);
+    border: none;
+    border-color: white;
+    color: white;
+  }
+  #popover:active {
+    background-color: rgba(163, 177, 183, 0.883);
+    transition: all 0.5s;
   }
 }
