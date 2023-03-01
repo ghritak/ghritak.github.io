@@ -109,7 +109,7 @@ a:hover {
 }
 
 h1 {
-  font-size: 39px;
+  font-size: 37px;
   font-family: Droid Serif, sans-serif;
 }
 
@@ -150,7 +150,9 @@ p {
 #div2 {
   padding-top: 50px;
 }
-
+#mine{
+  margin-left: 40px;
+}
 #downloadbtn {
   font-family: "Jura", sans-serif;
   text-transform: uppercase;
@@ -462,7 +464,9 @@ address {
   #headtext {
     padding-top: 30px;
   }
-
+  #mine{
+    margin-left: 0px;
+  }
   #downloadbtn:hover {
     background-color: rgb(100, 100, 159, 0);
   }
