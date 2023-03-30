@@ -211,87 +211,6 @@ p {
 }
 
 
-/*-----------------Projects------------------*/
-
-#project{
-  padding-top: 70px;
-  padding-bottom: 50px;
-  background-image: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 1),
-    rgba(35, 35, 35, 1.5)
-  );
-}
-#projectheading{
-	text-align: center;
-	color: white;
-	padding-top: 30px;
-	padding-bottom: 10px;
-	margin-bottom: 40px;
-	border-bottom: 2px solid currentColor;
-	border-color: rgb(60, 184, 121);
-	width: 110%;
-}
-#pdiv{
-  position: relative;
-}
-#pimg{
-  width: 300px;
-  margin-top: 70px;
-  border-color: black;
-  border-radius: 2%;
-  transition: 0.2s;
-}
-#pdiv #ppara{
-  padding: 20px;
-  text-align: justify;
-  position: absolute;
-  width: 300px;
-  bottom: 0;
-  right: 0;
-  padding-bottom: 50px;
-  visibility: hidden;
-  -webkit-transition: visibility 0s, opacity 0.5s linear; 
-  transition: visibility 0s, opacity 0.5s linear;
-}
-#pdiv:hover{
-  cursor: pointer;
-}
-#pdiv:hover #ppara{
-  visibility: visible; 
-}
-#pdiv:hover #pimg{
-  color: rgb(60, 184, 121);
-  opacity: 0.3;
-  transition: 0.2s;
-  -webkit-filter: blur(4px);
-  filter: blur(4px);
-}
-#pimg:hover{
-  -webkit-filter: blur(4px);
-  filter: blur(4px);
-}
-
-/*
-#pdiv:hover{
-  cursor: pointer;
-}
-#pdiv:hover #ppara{
-  visibility: visible;
-  opacity: 0.7; 
-}
-#pdiv:hover #pimg{
-  color: rgb(60, 184, 121);
-  -webkit-filter: blur(4px);
-  filter: blur(4px);
-}
-#pimg:hover{
-  -webkit-filter: blur(4px);
-  filter: blur(4px);
-}*/
-
-
-
 
 /*-----------------Footer------------------*/
 
@@ -470,16 +389,10 @@ address {
   #div1 {
     padding-top: 70px;
   }
-  #pimg #ppara{
-    width: 270px;
-  }
   #aboutme{
     padding: 15px;
     border-radius: 50px;
     padding-inline: 30px;
     transition: all 0.5s ease-in-out;
-  }
-  #project{
-    padding-top: 20px;
   }
 }
