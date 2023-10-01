@@ -1,11 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300");
 
-
 #aoscont {
   overflow-x: hidden;
   padding-bottom: 10px;
 }
-#mypage{
+#mypage {
   /* background: linear-gradient(135deg, rgba(0, 0, 0, 1), rgba(35, 35, 35, 1.5)); */
   background-image: linear-gradient(
     to bottom,
@@ -139,13 +138,12 @@ p {
   padding-inline: 30px;
   transition: all 0.3s ease-in-out;
 }
-#downloadbtn:hover{
+#downloadbtn:hover {
   background-color: rgb(59, 59, 108);
   color: white;
 }
 
 /*---------------About Me-----------------*/
-
 
 .collapsible {
   background-color: #777;
@@ -160,7 +158,8 @@ p {
   transition: background-color 0.3s ease;
 }
 
-.active, .collapsible:hover {
+.active,
+.collapsible:hover {
   background-color: #555;
 }
 
@@ -177,12 +176,10 @@ p {
   transition: max-height 0.3s ease;
 }
 
-
-
-#aboutme{
+#aboutme {
   display: none;
 }
-.btn{
+.btn {
   border-radius: 0px;
 }
 #para {
@@ -191,26 +188,34 @@ p {
   top: -280px;
   transition: all 0.5s ease-in-out;
 }
-#para2{
+#para2 {
   color: white;
   padding-top: 30px;
 }
-.fa-angle-up{
+.fa-angle-up {
   display: none;
 }
-.fa-angle-up.active{
+.fa-angle-up.active {
   display: inline-block;
-  background-color: rgb(59, 59, 108,0);
+  background-color: rgb(59, 59, 108, 0);
 }
-.fa-angle-down{
+.fa-angle-down {
   display: inline-block;
-  background-color: rgb(59, 59, 108,0);
+  background-color: rgb(59, 59, 108, 0);
 }
-.fa-angle-down.active{
+.fa-angle-down.active {
   display: none;
 }
-
-
+#chfmartLogo {
+  width: 90px;
+  height: 90px;
+  transition: 0.5s;
+}
+#chfmartLogo:hover {
+  transition: 0.5s;
+  width: 110px;
+  height: 110px;
+}
 
 /*-----------------Footer------------------*/
 
@@ -339,10 +344,10 @@ address {
   #headtext {
     padding-top: 30px;
   }
-  #downloadbtn:hover{
+  #downloadbtn:hover {
     background-color: rgb(100, 100, 159, 0);
   }
-  #downloadbtn:active{
+  #downloadbtn:active {
     background-color: rgb(100, 100, 159);
     color: white;
     transition: all 0.5s;
@@ -350,10 +355,10 @@ address {
 
   /*---------------About Me-----------------*/
 
-  #para2{
+  #para2 {
     display: none;
   }
-  #aboutme{
+  #aboutme {
     display: block;
     padding: 15px;
     border-radius: 50px;
@@ -364,7 +369,7 @@ address {
     border-color: white;
     color: white;
   }
-  #aboutme:active{
+  #aboutme:active {
     background-color: rgb(100, 100, 159);
     color: white;
     transition: all 0.5s;
@@ -383,13 +388,13 @@ address {
   }
 }
 @media screen and (max-width: 432px) {
-  h1{
+  h1 {
     font-size: 28px;
   }
   #div1 {
     padding-top: 70px;
   }
-  #aboutme{
+  #aboutme {
     padding: 15px;
     border-radius: 50px;
     padding-inline: 30px;
