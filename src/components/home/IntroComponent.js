@@ -27,9 +27,15 @@ const IntroComponent = () => {
               >
                 Hire Me
               </div>
-              <div className='rounded-full px-8 py-2 cursor-pointer bg-zinc-800  hover:bg-white hover:text-black  transition-all duration-300 border-[1.5px] border-white'>
-                Download CV
-              </div>
+              <a
+                href={`/Ghritak@Resume.pdf`}
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                <div className='rounded-full px-8 py-2 cursor-pointer bg-zinc-800  hover:bg-white hover:text-black  transition-all duration-300 border-[1.5px] border-white'>
+                  Download CV
+                </div>
+              </a>
             </div>
           </div>
         </div>
