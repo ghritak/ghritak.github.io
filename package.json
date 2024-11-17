@@ -12,16 +12,15 @@
     "deploy": "gh-pages -d build"
   },
   "dependencies": {
-    "@supabase/supabase-js": "^2.46.1",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "aos": "^2.3.4",
+    "firebase": "^11.0.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^5.0.1",
     "react-scripts": "5.0.1",
-    "swiper": "^11.1.14",
     "web-vitals": "^2.1.4"
   },
   "eslintConfig": {

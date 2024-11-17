@@ -7,10 +7,8 @@ const NavbarComponent = () => {
 
   const handleScroll = useCallback(() => {
     if (window.scrollY > 50 && !isScrolled) {
-      console.log('scrolled');
       setIsScrolled(true);
     } else if (window.scrollY <= 50 && isScrolled) {
-      console.log('not scrolled');
       setIsScrolled(false);
     }
   }, [isScrolled]);
