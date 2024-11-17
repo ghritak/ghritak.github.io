@@ -2,7 +2,7 @@ export const projects = [
   {
     name: 'Xpense - Your partner in Financial Wellness',
     stack: ['React Native', 'Expo', 'Firebase', 'Supabase', 'OAuth'],
-    link: 'https://wanderway.vercel.app/wander-way',
+    // link: 'https://wanderway.vercel.app/wander-way',
     img: require('../../assets/project/xpense.png'),
     description:
       'It is an expense tracker application designed to help users monitor and analyze their spending with ease. Built with Expo and utilizing intuitive UI elements, Xpense supports multiple currencies, theme options, and login methods to provide a personalized user experience. It uses Firebase Firestore for data storage and Firebase Authentication for secure user login.',
