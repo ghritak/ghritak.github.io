@@ -3,9 +3,10 @@ import Input from '../ui/Input';
 import TextArea from '../ui/TextArea';
 import Header from '../ui/Header';
 import { IoMdSend } from 'react-icons/io';
-import { supabase } from '../../supabaseConfig';
 import { RiLoader3Fill } from 'react-icons/ri';
 import Toast from '../ui/Toast';
+import { db } from '../../firebaseConfig';
+import { addDoc, collection } from 'firebase/firestore';
 
 const initData = {
   name: '',
@@ -17,7 +18,7 @@ const initData = {
 const ContactComponent = () => {
   const [formData, setFormData] = useState(initData);
   const [loading, setLoading] = useState(false);
-  const [isToast, setShowToast] = useState(false);
+  const [toast, setShowToast] = useState(null);
 
   const handleChangeInput = (event) => {
     const { name, value } = event.target;
@@ -27,22 +28,23 @@ const ContactComponent = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     setLoading(true);
-    const { error } = await supabase.from('contact').insert(formData);
+    const contactsRef = collection(db, 'contacts');
+    const docRef = await addDoc(contactsRef, formData);
 
-    if (error) {
-      console.log('Error:', error);
-    } else {
+    if (docRef.id) {
       console.log('Form submitted succesfully.');
       setFormData(initData);
+      showToast('Message Sent');
+    } else {
+      showToast("Couldn't send message");
     }
     setLoading(false);
-    showToast();
   };
 
-  const showToast = () => {
-    setShowToast(true);
+  const showToast = (message) => {
+    setShowToast(message);
     setTimeout(() => {
-      setShowToast(false);
+      setShowToast(null);
     }, 4000);
   };
 
@@ -101,7 +103,7 @@ const ContactComponent = () => {
           </button>
         </form>
       </div>
-      {isToast && <Toast setShowToast={setShowToast} />}
+      {toast && <Toast setShowToast={setShowToast} toast={toast} />}
     </section>
   );
 };
