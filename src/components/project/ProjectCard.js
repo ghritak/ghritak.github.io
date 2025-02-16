@@ -2,9 +2,7 @@ import React from 'react';
 
 const ProjectCard = ({ item, index }) => {
   const handleClick = () => {
-    if (item?.link) {
-      window.open(item?.link, '_blank');
-    }
+    // window.open(item?.link, '_blank');
   };
 
   return (
