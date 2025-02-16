@@ -28,7 +28,7 @@ const IntroComponent = () => {
                 Hire Me
               </div>
               <a
-                href={`/Ghritak@Resume.pdf`}
+                href={`/Ghritak Resume.pdf`}
                 target='_blank'
                 rel='noopener noreferrer'
               >

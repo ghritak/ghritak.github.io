@@ -2,7 +2,7 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://ghritak.github.io/portfolio",
+  "homepage": "https://ghritak.github.io",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
