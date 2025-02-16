@@ -15,10 +15,12 @@ const initData = {
   message: '',
 };
 
+const initToast = { message: '', type: 'none' }
+
 const ContactComponent = () => {
   const [formData, setFormData] = useState(initData);
   const [loading, setLoading] = useState(false);
-  const [isToast, setShowToast] = useState(false);
+  const [toast, setToast] = useState(initToast);
 
   const handleChangeInput = (event) => {
     const { name, value } = event.target;
@@ -27,6 +29,17 @@ const ContactComponent = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    if (!formData.name || !formData.phone || !formData.email || !formData.message) {
+      console.log('All fields are required');
+      showToast('Please fill in all fields', 'error');
+      return;
+    }
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) {
+      console.log('Invalid email address');
+      showToast('Please enter a valid email', 'error');
+      return;
+    }
     setLoading(true);
     try {
       const docRef = await addDoc(collection(db, 'contacts'), formData);
@@ -34,15 +47,17 @@ const ContactComponent = () => {
       setFormData(initData);
     } catch (error) {
       console.log('Error adding document: ', error);
+    } finally {
+      setLoading(false);
+      showToast('Message sent', 'success');
     }
-    setLoading(false);
-    showToast();
   };
 
-  const showToast = () => {
-    setShowToast(true);
+  const showToast = (message, type) => {
+    if (toast.message) return
+    setToast({ message, type });
     setTimeout(() => {
-      setShowToast(false);
+      setToast(initToast);
     }, 4000);
   };
 
@@ -101,7 +116,7 @@ const ContactComponent = () => {
           </button>
         </form>
       </div>
-      {isToast && <Toast setShowToast={setShowToast} />}
+      {toast.message && <Toast toast={toast} setToast={setToast} />}
     </section>
   );
 };
