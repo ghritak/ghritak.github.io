@@ -5,8 +5,8 @@ import Header from '../ui/Header';
 import { IoMdSend } from 'react-icons/io';
 import { RiLoader3Fill } from 'react-icons/ri';
 import Toast from '../ui/Toast';
+import { collection, addDoc } from 'firebase/firestore';
 import { db } from '../../firebaseConfig';
-import { addDoc, collection } from 'firebase/firestore';
 
 const initData = {
   name: '',
@@ -18,7 +18,7 @@ const initData = {
 const ContactComponent = () => {
   const [formData, setFormData] = useState(initData);
   const [loading, setLoading] = useState(false);
-  const [toast, setShowToast] = useState(null);
+  const [isToast, setShowToast] = useState(false);
 
   const handleChangeInput = (event) => {
     const { name, value } = event.target;
@@ -28,23 +28,21 @@ const ContactComponent = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     setLoading(true);
-    const contactsRef = collection(db, 'contacts');
-    const docRef = await addDoc(contactsRef, formData);
-
-    if (docRef.id) {
-      console.log('Form submitted succesfully.');
+    try {
+      const docRef = await addDoc(collection(db, 'contacts'), formData);
+      console.log('Document written with ID: ', docRef.id);
       setFormData(initData);
-      showToast('Message Sent');
-    } else {
-      showToast("Couldn't send message");
+    } catch (error) {
+      console.log('Error adding document: ', error);
     }
     setLoading(false);
+    showToast();
   };
 
-  const showToast = (message) => {
-    setShowToast(message);
+  const showToast = () => {
+    setShowToast(true);
     setTimeout(() => {
-      setShowToast(null);
+      setShowToast(false);
     }, 4000);
   };
 
@@ -103,7 +101,7 @@ const ContactComponent = () => {
           </button>
         </form>
       </div>
-      {toast && <Toast setShowToast={setShowToast} toast={toast} />}
+      {isToast && <Toast setShowToast={setShowToast} />}
     </section>
   );
 };

@@ -2,27 +2,79 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --dark: #191918;
+  --blur: clamp(100px, 100vw, 100px);
+  --gradient: linear-gradient(
+    -45deg,
+    rgba(185, 77, 31, 0.5) 50%,
+    rgba(255, 216, 79, 0.5) 30%
+  );
+  --size: clamp(200px, 35vw, 600px);
+}
+
 body {
-    padding: 0;
+  padding: 0;
   margin: 0;
-  /* font-family: -apple-system, BlinkMacSystemFont, 'Nunito', 'Segoe UI', 'Roboto',
-    'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif; */
-  font-family: 'Nunito';
+  font-family: "Nunito";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #27272a;
+  background-color: var(--dark);
+}
+
+.variant {
+  position: relative;
+  padding: clamp(3rem, 6vw, 5rem);
+}
+
+.bg-image {
+  /* width: var(--size);
+  height: var(--size); */
+  background-image: var(--gradient);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.bg-image--blur {
+  filter: blur(var(--blur));
+}
+
+.label {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.variant:hover .label {
+  opacity: 1;
+}
+
+.content {
+  position: relative;
+  z-index: 1; /* Make sure content stays on top of the background */
+  text-align: center;
+  color: white;
+}
+
+.content h1 {
+  font-size: 3rem;
+}
+
+.content p {
+  font-size: 1.5rem;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
 .scroll-container > div {
-	height: 100vh; /* Ensure each section takes the full viewport height */
-	display: flex; /* To center content if needed */
-	align-items: center; /* Center content vertically */
-	justify-content: center; /* Center content horizontally */
-  }
-  
+  height: 100vh; /* Ensure each section takes the full viewport height */
+  display: flex; /* To center content if needed */
+  align-items: center; /* Center content vertically */
+  justify-content: center; /* Center content horizontally */
+}

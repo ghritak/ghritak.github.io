@@ -1,43 +1,38 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useLayoutEffect, useState } from 'react';
 import NavbarButton from './NavbarButton';
 import { scrollToSection } from '../../utils/scroll';
+import { useNavigate } from 'react-router-dom';
 
-const NavbarComponent = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
+const NavbarComponent = ({ view, currentIndex }) => {
+  const navigate = useNavigate();
+  const [currentView, setCurrentView] = useState(view);
 
-  const handleScroll = useCallback(() => {
-    if (window.scrollY > 50 && !isScrolled) {
-      setIsScrolled(true);
-    } else if (window.scrollY <= 50 && isScrolled) {
-      setIsScrolled(false);
-    }
-  }, [isScrolled]);
+  useLayoutEffect(() => {
+    if (currentView) scrollToSection(currentView)
+  }, [currentView])
 
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, [handleScroll]);
+  const handleClick = (view) => {
+    const params = new URLSearchParams();
+    params.set('view', view);
+    navigate(`?${params.toString()}`);
+    scrollToSection(currentView)
+    setCurrentView(view);
+  }
 
   return (
-    <div className='fixed bottom-4 xl:bottom-auto xl:-top-4 sm:pt-10 rounded-bl-custom rounded-br-custom z-50'>
+    <div className='fixed bottom-4 xl:bottom-auto xl:-top-4 sm:pt-10 rounded-bl-custom rounded-br-custom z-50 xl:backdrop-blur-sm '>
       <header className='flex justify-center items-center w-screen'>
-        <div
-          className={`flex flex-row justify-around w-full max-w-sm mx-5 xl:max-w-2xl transition-all duration-300 ${
-            isScrolled ? 'bg-zinc-900' : 'bg-zinc-900 xl:bg-zinc-800'
-          } rounded-full py-3 xl:py-4`}
-        >
-          <NavbarButton onClick={() => scrollToSection('home')}>
+        <div className={`flex flex-row justify-around w-full max-w-sm mx-5 xl:max-w-2xl rounded-full py-3 xl:py-4 transition-all duration-300 ${(currentIndex === 0) ? '' : 'bg-[#232322]'}`}>
+          <NavbarButton onClick={() => handleClick('home')}>
             Home
           </NavbarButton>
-          <NavbarButton onClick={() => scrollToSection('about')}>
+          <NavbarButton onClick={() => handleClick('about')}>
             About
           </NavbarButton>
-          <NavbarButton onClick={() => scrollToSection('projects')}>
+          <NavbarButton onClick={() => handleClick('projects')}>
             Projects
           </NavbarButton>
-          <NavbarButton onClick={() => scrollToSection('contact')}>
+          <NavbarButton onClick={() => handleClick('contact')}>
             Contact
           </NavbarButton>
         </div>

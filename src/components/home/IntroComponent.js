@@ -23,7 +23,7 @@ const IntroComponent = () => {
             <div className='flex space-x-3'>
               <div
                 onClick={() => scrollToSection('contact')}
-                className='rounded-full px-8 py-2 cursor-pointer bg-black text-white hover:bg-white hover:text-black transition-all duration-300 border-black border-[1.5px]'
+                className='rounded-full px-8 py-2 cursor-pointer bg-black text-white hover:bg-white hover:text-black transition-all duration-300 border-black border-[1px]'
               >
                 Hire Me
               </div>
