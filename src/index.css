@@ -28,8 +28,6 @@ body {
 }
 
 .bg-image {
-  /* width: var(--size);
-  height: var(--size); */
   background-image: var(--gradient);
   border-radius: 50%;
   transition: all 0.3s ease;
@@ -54,7 +52,7 @@ body {
 
 .content {
   position: relative;
-  z-index: 1; /* Make sure content stays on top of the background */
+  z-index: 1;
   text-align: center;
   color: white;
 }
@@ -73,8 +71,38 @@ code {
 }
 
 .scroll-container > div {
-  height: 100vh; /* Ensure each section takes the full viewport height */
-  display: flex; /* To center content if needed */
-  align-items: center; /* Center content vertically */
-  justify-content: center; /* Center content horizontally */
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.toast-enter {
+  animation: slideInFromBottom 0.3s ease-out forwards;
+}
+
+@keyframes slideInToBottom {
+  0% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+.toast-leave {
+  animation: slideInToBottom 0.3s ease-out forwards;
 }
