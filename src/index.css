@@ -16,6 +16,7 @@
 body {
   padding: 0;
   margin: 0;
+  margin-top: -80px;
   font-family: "Nunito";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -24,26 +25,16 @@ body {
 
 .variant {
   position: relative;
-  padding: clamp(3rem, 6vw, 5rem);
 }
 
 .bg-image {
   background-image: var(--gradient);
   border-radius: 50%;
-  transition: all 0.3s ease;
+  transition: all 0.8s ease;
 }
 
 .bg-image--blur {
   filter: blur(var(--blur));
-}
-
-.label {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate3d(-50%, -50%, 0);
-  opacity: 0;
-  transition: opacity 0.3s ease;
 }
 
 .variant:hover .label {
