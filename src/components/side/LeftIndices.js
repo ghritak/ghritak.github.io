@@ -1,15 +1,10 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useCallback, useLayoutEffect, useState } from 'react';
 import { getPosition } from '../../utils/scroll';
 
 const sections = ['home', 'about', 'projects', 'contact'];
 
-const LeftIndices = ({ setViewportWidth, currentIndex, setCurrentIndex }) => {
+const LeftIndices = ({ currentIndex, setCurrentIndex }) => {
   const [sectionHeights, setSectionHeights] = useState([0, 0, 0, 0]);
-
-  useEffect(() => {
-    if (currentIndex === 0) setViewportWidth(50)
-    else setViewportWidth(35)
-  }, [currentIndex, setViewportWidth])
 
   const handleScroll = useCallback(() => {
     const scrollY = window.scrollY;
@@ -22,7 +17,7 @@ const LeftIndices = ({ setViewportWidth, currentIndex, setCurrentIndex }) => {
     setCurrentIndex(newIndex !== -1 ? newIndex : sectionHeights.length - 1);
   }, [sectionHeights, setCurrentIndex]);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     window.addEventListener('scroll', handleScroll);
 
     return () => {
@@ -30,7 +25,7 @@ const LeftIndices = ({ setViewportWidth, currentIndex, setCurrentIndex }) => {
     };
   }, [sectionHeights, handleScroll]);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const positions = sections.map((id) => getPosition(id));
     setSectionHeights(positions);
   }, []);

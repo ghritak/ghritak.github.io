@@ -10,8 +10,7 @@ import Background from './components/ui/Background';
 
 
 const App = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [viewportWidth, setViewportWidth] = useState(35);
+  const [currentIndex, setCurrentIndex] = useState(0)
   const location = useLocation();
   const queryParams = new URLSearchParams(location.search);
   const view = queryParams.get('view');
@@ -21,8 +20,8 @@ const App = () => {
   }, []);
 
   return (
-    <Background viewportWidth={viewportWidth}>
-      <LeftIndices setViewportWidth={setViewportWidth} currentIndex={currentIndex} setCurrentIndex={setCurrentIndex} />
+    <Background currentIndex={currentIndex}>
+      <LeftIndices currentIndex={currentIndex} setCurrentIndex={setCurrentIndex} />
       <RightLinks />
       <NavbarComponent view={view} currentIndex={currentIndex} />
       <MainComponent />
