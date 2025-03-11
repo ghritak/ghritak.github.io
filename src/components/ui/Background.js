@@ -17,8 +17,8 @@ const Background = ({ children, currentIndex }) => {
         <div className='relative'>
             <div className='fixed w-screen h-screen pointer-events-none'>
                 <div className="variant relative flex">
-                    <div className="w-1/2 h-screen fixed top-0 bottom-0 -right-40 flex flex-col justify-center items-center -z-10 bg-image bg-image--blur" style={{ width: dynamicSize, height: dynamicSize }} />
-                    <div className="w-1/2 h-screen opacity-15">
+                    <div className="w-1/2 h-screen fixed top-0 bottom-0 -right-40 flex flex-col justify-center items-center -z-10 bg-image bg-image--blur slow-pulse" style={{ width: dynamicSize, height: dynamicSize }} />
+                    <div className="w-1/2 h-screen opacity-10">
                         <CircleLines currentIndex={currentIndex} />
                     </div>
                 </div>
