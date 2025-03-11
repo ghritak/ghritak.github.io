@@ -6,7 +6,7 @@ const CircleLines = ({ currentIndex }) => {
     const size = isWrapped ? '1600' : '1200'
 
     return (
-        <div style={{rotate: isWrapped ? '-18deg' : '0deg'}} >
+        <div style={{ rotate: isWrapped ? '-18deg' : '8deg' }} >
             <svg width={size} height={size} viewBox="0 0 1200 1200">
                 <g transform={`translate(${isWrapped ? '100' : '0'},-${screenHeight - 80})`} className='transition-all duration-300'>
                     <circle cx="1350" cy="1350" r="700" fill="none" stroke="#D9D9D9" strokeWidth="2" />
